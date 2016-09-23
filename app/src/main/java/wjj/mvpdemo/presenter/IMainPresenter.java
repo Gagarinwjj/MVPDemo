@@ -5,6 +5,6 @@ package wjj.mvpdemo.presenter;
  * Created by wjj on 2016/9/23 11:21.
  */
 
- public interface IMainPresenter {
+ public interface IMainPresenter{
     void getUserInfo();
 }
