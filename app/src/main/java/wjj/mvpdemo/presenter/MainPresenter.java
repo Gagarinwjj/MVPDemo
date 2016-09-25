@@ -11,9 +11,11 @@ import wjj.mvpdemo.view.IMainView;
 
 public class MainPresenter extends BasePresenter<IMainView> implements IMainPresenter {
 
-
     public MainPresenter(IMainView view) {
-        attachView(view);
+        //这里会默认调用super(),即调用父类默认的无参构造函数,但是父类是没有的
+        //this.view=view;//mind5:封装为detachView对称的方法attachView
+        //attachView(view);
+        super(view);//mind6: 父类直接实现构造方法,子类match一下就可以
     }
 
     @Override

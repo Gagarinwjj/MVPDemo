@@ -35,4 +35,10 @@ public class MainActivity extends MvpActivity<MainPresenter> implements IMainVie
     public void saveUser(User user) {
 
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //mind1:此处需要实现Presenter的解耦,既然所有Activity都要实现,所以放到父类
+    }
 }
